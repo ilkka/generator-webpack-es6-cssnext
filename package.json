@@ -1,0 +1,30 @@
+{
+  "name": "generator-webpack-es6-cssnext",
+  "version": "0.0.0",
+  "description": "Yeoman generator",
+  "license": "MIT",
+  "main": "app/index.js",
+  "repository": "ilkka/generator-webpack-es6-cssnext",
+  "author": {
+    "name": "Ilkka Laukkanen",
+    "email": "ilkka@fastmail.fm",
+    "url": "https://github.com/ilkka"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^0.19.0",
+    "chalk": "^1.0.0",
+    "yosay": "^1.0.2"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
