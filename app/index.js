@@ -46,15 +46,13 @@ module.exports = yeoman.generators.Base.extend({
 
   writing: {
     app: function () {
-      this.fs.copyTpl(
-        this.templatePath('_package.json'),
-        this.destinationPath('package.json'),
-        this.props
-      );
-      this.fs.copy(
-        this.templatePath('webpack.config.js'),
-        this.destinationPath('webpack.config.js')
-      );
+      [
+        {src: '_package.json', dst: 'package.json'},
+        {src: 'webpack.config.js', dst: 'webpack.config.js'},
+        {src: 'index.html', dst: 'index.html'}
+      ].forEach(function (f) {
+        this.fs.copyTpl(this.templatePath(f.src), this.destinationPath(f.dst), this.props);
+      }.bind(this));
     },
 
     projectfiles: function () {
