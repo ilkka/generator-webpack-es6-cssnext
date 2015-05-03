@@ -4,10 +4,10 @@
   "description": "Yeoman generator",
   "license": "MIT",
   "main": "app/index.js",
-  "repository": "ilkka/generator-webpack-es6-cssnext",
+  "repository": "https://github.com/ilkka/generator-webpack-es6-cssnext",
   "author": {
     "name": "Ilkka Laukkanen",
-    "email": "ilkka@fastmail.fm",
+    "email": "ilkka@ilkka.io",
     "url": "https://github.com/ilkka"
   },
   "scripts": {
