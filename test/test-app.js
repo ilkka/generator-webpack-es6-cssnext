@@ -9,16 +9,26 @@ describe('webpack-es6-cssnext:app', function () {
   before(function (done) {
     helpers.run(path.join(__dirname, '../app'))
       .withOptions({ skipInstall: true })
-      .withPrompts({ someOption: true })
+      .withPrompts({
+        projectName: 'my-project',
+        projectDescription: 'my project description',
+        authorName: 'Ahto Simakuutio <ahto@example.com>',
+        license: 'Apache 2.0'
+      })
       .on('end', done);
   });
 
   it('creates files', function () {
     assert.file([
-      'bower.json',
       'package.json',
       '.editorconfig',
-      '.jshintrc'
+      '.jshintrc',
+      '.jscsrc',
+      '.gitignore',
+      'index.html',
+      'webpack.config.js',
+      'src/js/app.js',
+      'src/css/main.css'
     ]);
   });
 });
