@@ -31,4 +31,13 @@ describe('webpack-es6-cssnext:app', function () {
       'src/css/main.css'
     ]);
   });
+
+  it('templates metadata in package.json', function () {
+    assert.fileContent([
+      ['package.json', /"name": "my-project",/],
+      ['package.json', /"description": "my project description",/],
+      ['package.json', /"author": "Ahto Simakuutio <ahto@example.com>",/],
+      ['package.json', /"license": "Apache 2.0",/]
+    ]);
+  })
 });
