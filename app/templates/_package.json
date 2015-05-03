@@ -1,5 +1,30 @@
 {
-  "name": "package",
+  "name": "<%= projectName %>",
   "version": "0.0.0",
-  "dependencies": {}
+  "description": "<%= projectDescription %>",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "<%= authorName %>",
+  "license": "<%= license %>",
+  "devDependencies": {
+    "autoprefixer-core": "^5.1.11",
+    "babel-core": "^5.2.6",
+    "babel-loader": "^5.0.0",
+    "colors": "^1.1.0",
+    "css-loader": "^0.12.0",
+    "cssnext": "^1.4.0",
+    "cssnext-loader": "^1.0.1",
+    "csswring": "^3.0.4",
+    "doiuse": "^0.3.2",
+    "postcss": "^4.1.8",
+    "postcss-loader": "^0.4.1",
+    "postcss-nested": "^0.2.2",
+    "style-loader": "^0.12.1",
+    "webpack": "^1.8.11",
+    "webpack-dev-server": "^1.8.2",
+    "wordwrap": "0.0.2"
+  }
 }

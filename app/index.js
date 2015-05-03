@@ -13,29 +13,43 @@ module.exports = yeoman.generators.Base.extend({
 
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the super-duper ' + chalk.red('WebpackEs6Cssnext') + ' generator!'
+      'Welcome to the ' + chalk.red('webpack-ws6-cssnext') + ' generator!'
     ));
 
     var prompts = [{
-      type: 'confirm',
-      name: 'someOption',
-      message: 'Would you like to enable this option?',
-      default: true
+      type    : 'input',
+      name    : 'projectName',
+      message : 'Project name',
+      default : this.appname // Default to current folder name
+    },
+    {
+      type    : 'input',
+      name    : 'projectDescription',
+      message : 'Project description'
+    },
+    {
+      type    : 'input',
+      name    : 'authorName',
+      message : 'Author name'
+    },
+    {
+      type    : 'input',
+      name    : 'license',
+      message : 'License'
     }];
 
     this.prompt(prompts, function (props) {
       this.props = props;
-      // To access props later use this.props.someOption;
-
       done();
     }.bind(this));
   },
 
   writing: {
     app: function () {
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('_package.json'),
-        this.destinationPath('package.json')
+        this.destinationPath('package.json'),
+        this.props
       );
     },
 
