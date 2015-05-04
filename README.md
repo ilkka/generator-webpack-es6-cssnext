@@ -1,4 +1,4 @@
-# generator-webpack-es6-cssnext [![Build Status](https://secure.travis-ci.org/ilkka/generator-webpack-es6-cssnext.png?branch=master)](https://travis-ci.org/ilkka/generator-webpack-es6-cssnext)
+# generator-webpack-es6-cssnext [![Build Status](https://secure.travis-ci.org/ilkka/generator-webpack-es6-cssnext.png?branch=master)](https://travis-ci.org/ilkka/generator-webpack-es6-cssnext) [![Requirements Status](https://requires.io/github/ilkka/generator-webpack-es6-cssnext/requirements.svg?branch=master)](https://requires.io/github/ilkka/generator-webpack-es6-cssnext/requirements/?branch=master)
 
 > [Yeoman](http://yeoman.io) generator
 
