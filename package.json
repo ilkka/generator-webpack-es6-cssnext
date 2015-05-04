@@ -1,6 +1,6 @@
 {
   "name": "generator-webpack-es6-cssnext",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Yeoman generator",
   "license": "MIT",
   "main": "app/index.js",
