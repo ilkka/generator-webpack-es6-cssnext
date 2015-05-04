@@ -31,6 +31,8 @@ module.exports = {
         ]
     },
     postcss: [
+        nested(),
+        cssnext(),
         doiuse({
             onFeatureUsage: function(info) {
                 var source = info.usage.source;
@@ -43,8 +45,6 @@ module.exports = {
                 console.log(wordwrap(4, process.stdout.columns - 1)(message) + '\n');
             }
         }),
-        nested(),
-        cssnext(),
         autoprefixer(),
         csswring()
     ],
