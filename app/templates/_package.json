@@ -7,7 +7,7 @@
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "<%= authorName %>",
+  "author": "<%= authorName %> <<%= authorEmail %>>",
   "license": "<%= license %>",
   "devDependencies": {
     "autoprefixer-core": "^5.1.11",

@@ -34,6 +34,11 @@ module.exports = yeoman.generators.Base.extend({
     },
     {
       type    : 'input',
+      name    : 'authorEmail',
+      message : 'Author email'
+    },
+    {
+      type    : 'input',
       name    : 'license',
       message : 'License'
     }];

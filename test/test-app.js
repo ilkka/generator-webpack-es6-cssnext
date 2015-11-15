@@ -12,7 +12,8 @@ describe('webpack-es6-cssnext:app', function () {
       .withPrompts({
         projectName: 'my-project',
         projectDescription: 'my project description',
-        authorName: 'Ahto Simakuutio <ahto@example.com>',
+        authorName: 'Ahto Simakuutio',
+        authorEmail: 'ahto@example.com',
         license: 'Apache 2.0'
       })
       .on('end', done);
