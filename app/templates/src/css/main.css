@@ -1,18 +1,24 @@
+/* cssnext: CSS variables */
 :root {
     --mainColor: #ffbbaaff;
 }
-@custom-media    --mobile (width <= 640px);
-@custom-selector --heading h1, h2, h3, h4, h5, h6;
 
+/* cssnext: custom media queries */
+@custom-media --mobile (width <= 640px);
+
+/* cssnext: custom selectors */
+@custom-selector :--heading h1, h2, h3, h4, h5, h6;
+
+/* Nesting via postcss-nested */
 main {
-    --heading {
+    :--heading {
         text-rendering: optimizeLegibility;
         color: color( var(--mainColor) blackness(+20%) );
     }
 }
 
 @media (--mobile) {
-    --heading {
+    :--heading {
         margin-top: 0;
     }
 }
