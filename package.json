@@ -25,6 +25,6 @@
     "yosay": "1.1.1"
   },
   "devDependencies": {
-    "mocha": "2.4.5"
+    "mocha": "2.5.2"
   }
 }
