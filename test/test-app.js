@@ -1,13 +1,13 @@
 'use strict';
 
 var path = require('path');
-var assert = require('yeoman-generator').assert;
-var helpers = require('yeoman-generator').test;
+var assert = require('yeoman-assert');
+var helpers = require('yeoman-test');
 var os = require('os');
 
 describe('webpack-es6-cssnext:app', function () {
-  before(function (done) {
-    helpers.run(path.join(__dirname, '../app'))
+  before(function () {
+    return helpers.run(path.join(__dirname, '../app'))
       .withOptions({ skipInstall: true })
       .withPrompts({
         projectName: 'my-project',
@@ -16,7 +16,7 @@ describe('webpack-es6-cssnext:app', function () {
         authorEmail: 'ahto@example.com',
         license: 'Apache 2.0'
       })
-      .on('end', done);
+      .toPromise();
   });
 
   it('creates files', function () {
